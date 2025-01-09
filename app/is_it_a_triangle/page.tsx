@@ -4,6 +4,7 @@ import SelectNumber from "./SelectNumber";
 import LinkBack from "../_components/LinkBack";
 import TaskTitle from "../_components/TaskTitle";
 import Triangle from "./Triangle";
+import WrapperWithLabel from "../_components/WrapperWithLabel";
 
 export default function IsItATriangle() {
   const [selectedNumber1, setSelectedNumber1] = useState(1);
@@ -15,37 +16,41 @@ export default function IsItATriangle() {
   }
 
   return (
-    <div className="flex flex-col gap-10 p-20 font-[family-name:var(--font-geist-sans)] text-gray-900">
+    <>
       <LinkBack />
       <TaskTitle title="Is it a triangle?" />
-      <div className="flex gap-5">
-        <SelectNumber
-          selectedNumber={selectedNumber1}
-          setSelectedNumber={setSelectedNumber1}
-        />
-        <SelectNumber
-          selectedNumber={selectedNumber2}
-          setSelectedNumber={setSelectedNumber2}
-        />
-        <SelectNumber
-          selectedNumber={selectedNumber3}
-          setSelectedNumber={setSelectedNumber3}
-        />
-      </div>
+      <WrapperWithLabel label="Length of triangle sides">
+        <div className="flex gap-5">
+          <SelectNumber
+            selectedNumber={selectedNumber1}
+            setSelectedNumber={setSelectedNumber1}
+          />
+          <SelectNumber
+            selectedNumber={selectedNumber2}
+            setSelectedNumber={setSelectedNumber2}
+          />
+          <SelectNumber
+            selectedNumber={selectedNumber3}
+            setSelectedNumber={setSelectedNumber3}
+          />
+        </div>
+      </WrapperWithLabel>
       <div>
-        {isItATriangle(selectedNumber1, selectedNumber2, selectedNumber3) ? (
-          <>
-            {"Valid triangle"}
-            <Triangle
-              a={selectedNumber1 * 20}
-              b={selectedNumber2 * 20}
-              c={selectedNumber3 * 20}
-            />
-          </>
-        ) : (
-          "Invalid triangle"
-        )}
+        <WrapperWithLabel label="Possible triangle">
+          {isItATriangle(selectedNumber1, selectedNumber2, selectedNumber3) ? (
+            <>
+              {"Valid triangle"}
+              <Triangle
+                a={selectedNumber1 * 20}
+                b={selectedNumber2 * 20}
+                c={selectedNumber3 * 20}
+              />
+            </>
+          ) : (
+            "Invalid triangle"
+          )}
+        </WrapperWithLabel>
       </div>
-    </div>
+    </>
   );
 }
