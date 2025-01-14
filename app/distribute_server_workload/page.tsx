@@ -9,18 +9,33 @@ export default function DistributeServerWorkload() {
   const [nodesNumber, setNodesNumber] = useState<number>(1);
   const [workloadsNumber, setWorkloadsNumber] = useState<number>(1);
 
-  function distribute(nodes: number, workload: number): number[][] {
-    const distribution = Array.from({ length: nodes }, () => [0]);
-    for (let i = 0; i <= workload - 1; i++) {
-      distribution[i % nodes][0]++;
-    }
-    return distribution;
+  function distribute(nodes: number, workload: number) {
+    return Array.from({ length: nodes }, (_, i) =>
+      Array.from(
+        {
+          length: Math.floor(workload / nodes) + (i < workload % nodes ? 1 : 0),
+        },
+        (_, j) =>
+          j + i * Math.floor(workload / nodes) + Math.min(i, workload % nodes)
+      )
+    );
   }
 
   return (
     <>
       <LinkBack />
       <TaskTitle title="Distribute server workload" />
+      <div>
+        Bob has a server farm crunching numbers. He has nodes servers in his
+        farm. His company has a lot of work to do.
+        <br /> The work comes as a number workload which indicates how many jobs
+        there are. Bob wants his servers to get an equal number of jobs each. If
+        that is impossible, he wants the first servers to receive more jobs. He
+        also wants the jobs sorted, so that the first server receives the first
+        jobs.
+        <br /> The way this works, Bob wants an array indicating which jobs are
+        going to which servers.
+      </div>
       <WrapperWithLabel label="Number of nodes">
         <InputNaturalNumber number={nodesNumber} setNumber={setNodesNumber} />
       </WrapperWithLabel>
@@ -30,9 +45,19 @@ export default function DistributeServerWorkload() {
           setNumber={setWorkloadsNumber}
         />
       </WrapperWithLabel>
-
       <WrapperWithLabel label="Distribution">
-        <>{distribute(nodesNumber, workloadsNumber)}</>
+        <>
+          {!nodesNumber || !workloadsNumber
+            ? "Invalid input"
+            : distribute(nodesNumber, workloadsNumber).map(
+                (outerArrayItem) =>
+                  "[" +
+                  outerArrayItem.map((innerArrayItem, index) =>
+                    index === 0 ? innerArrayItem : ` ${innerArrayItem}`
+                  ) +
+                  "] "
+              )}
+        </>
       </WrapperWithLabel>
     </>
   );

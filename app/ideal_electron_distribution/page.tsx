@@ -27,6 +27,28 @@ export default function IdealElectronDistribution() {
     <>
       <LinkBack />
       <TaskTitle title="Ideal electron distribution" />
+      <div>
+        You are a <i>khmmadkhm</i> scientist and you decided to play with
+        electron distribution among atom's shells. You know that basic idea of
+        electron distribution is that electrons should fill a shell until it's
+        holding the maximum number of electrons.
+        <ul className="list-disc">
+          Rules:
+          <li>
+            Maximum number of electrons in a shell is distributed with a rule of
+            2n^2 (n being position of a shell).
+          </li>
+          <li>
+            For example, maximum number of electrons in 3rd shell is 2*3^2 = 18.
+          </li>
+          <li> Electrons should fill the lowest level shell first.</li>
+          <li>
+            If the electrons have completely filled the lowest level shell, the
+            other unoccupied electrons will fill the higher level shell and so
+            on.
+          </li>
+        </ul>
+      </div>
       <WrapperWithLabel label="Number of electrons">
         <InputNaturalNumber number={number} setNumber={setNumber} />
       </WrapperWithLabel>
