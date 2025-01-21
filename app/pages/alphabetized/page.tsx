@@ -1,10 +1,10 @@
 "use client";
 
+import InputString from "@/app/_components/InputString";
+import LinkBack from "@/app/_components/LinkBack";
+import TaskTitle from "@/app/_components/TaskTitle";
+import WrapperWithLabel from "@/app/_components/WrapperWithLabel";
 import { useState } from "react";
-import LinkBack from "../_components/LinkBack";
-import TaskTitle from "../_components/TaskTitle";
-import WrapperWithLabel from "../_components/WrapperWithLabel";
-import InputNaturalString from "../_components/InputString";
 
 export default function Alphabetized() {
   const [string, setString] = useState<string>("");
@@ -38,7 +38,7 @@ export default function Alphabetized() {
         alphabet letters.
       </div>
       <WrapperWithLabel label="String">
-        <InputNaturalString string={string} setString={setString} />
+        <InputString string={string} setString={setString} />
       </WrapperWithLabel>
 
       <WrapperWithLabel label="Alphabetized string">

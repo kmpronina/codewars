@@ -1,10 +1,10 @@
 "use client";
+import LinkBack from "@/app/_components/LinkBack";
+import TaskTitle from "@/app/_components/TaskTitle";
+import WrapperWithLabel from "@/app/_components/WrapperWithLabel";
 import { useState } from "react";
 import SelectNumber from "./SelectNumber";
-import LinkBack from "../_components/LinkBack";
-import TaskTitle from "../_components/TaskTitle";
 import Triangle from "./Triangle";
-import WrapperWithLabel from "../_components/WrapperWithLabel";
 
 export default function IsItATriangle() {
   const [selectedNumber1, setSelectedNumber1] = useState(1);

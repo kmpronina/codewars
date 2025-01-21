@@ -1,9 +1,9 @@
 "use client";
+import InputNaturalNumber from "@/app/_components/InputNaturalNumber";
+import LinkBack from "@/app/_components/LinkBack";
+import TaskTitle from "@/app/_components/TaskTitle";
+import WrapperWithLabel from "@/app/_components/WrapperWithLabel";
 import { useState } from "react";
-import InputNaturalNumber from "../_components/InputNaturalNumber";
-import LinkBack from "../_components/LinkBack";
-import TaskTitle from "../_components/TaskTitle";
-import WrapperWithLabel from "../_components/WrapperWithLabel";
 
 export default function DistributeServerWorkload() {
   const [nodesNumber, setNodesNumber] = useState<number>(1);

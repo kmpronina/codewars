@@ -1,10 +1,10 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import LinkBack from "../_components/LinkBack";
-import TaskTitle from "../_components/TaskTitle";
-import WrapperWithLabel from "../_components/WrapperWithLabel";
-import InputNaturalNumber from "../_components/InputNaturalNumber";
+import LinkBack from "../../_components/LinkBack";
+import TaskTitle from "../../_components/TaskTitle";
+import WrapperWithLabel from "../../_components/WrapperWithLabel";
+import InputNaturalNumber from "../../_components/InputNaturalNumber";
 
 export default function TriangleNumberCheck() {
   const [number, setNumber] = useState<number>(6);

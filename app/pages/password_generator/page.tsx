@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import LinkBack from "../_components/LinkBack";
-import TaskTitle from "../_components/TaskTitle";
-import WrapperWithLabel from "../_components/WrapperWithLabel";
-import Button from "../_components/Button";
+import LinkBack from "../../_components/LinkBack";
+import TaskTitle from "../../_components/TaskTitle";
+import WrapperWithLabel from "../../_components/WrapperWithLabel";
+import Button from "../../_components/Button";
 
 export default function PasswordGenerator() {
   const [string, setString] = useState<string>("");

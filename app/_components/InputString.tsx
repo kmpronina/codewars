@@ -1,12 +1,9 @@
-interface InputNaturalNumberProps {
+interface InputStringProps {
   string: string;
   setString: (string: string) => void;
 }
 
-export default function InputNaturalString({
-  string,
-  setString,
-}: InputNaturalNumberProps) {
+export default function InputString({ string, setString }: InputStringProps) {
   return (
     <input
       type="string"
