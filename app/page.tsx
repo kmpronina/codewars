@@ -12,8 +12,9 @@ export default function Home() {
         Ideal electron distribution
       </Link>
       <Link href="/pages/is_it_a_triangle">Is it a triangle?</Link>
-      <Link href="/pages/password_generator ">Password generator</Link>
-      <Link href="/pages/repeated_substring ">Repeated Substring</Link>
+      <Link href="/pages/password_generator">Password generator</Link>
+      <Link href="/pages/repeated_substring">Repeated Substring</Link>
+      <Link href="/pages/strong_number">Strong Number</Link>
       <Link href="/pages/triangle_number_check">Triangle number check</Link>
     </main>
   );

@@ -16,11 +16,11 @@ export default function PasswordGenerator() {
       return Math.floor(rand);
     }
 
-    const res = [];
-    for (let i = 0; i < randomInteger(6, 20); i++) {
-      res.push(alphabet[randomInteger(0, 25)]);
+    const arr = [];
+    for (let i = 0; i < Math.floor(randomInteger(60, 200) / 10); i++) {
+      arr.push(alphabet[randomInteger(0, 25)]);
     }
-    const newRes = res.map((item: string | number) => {
+    const res = arr.map((item: string | number) => {
       if (randomInteger(0, 100) < 50 && typeof item === "string") {
         item = item.toUpperCase();
       }
@@ -30,8 +30,8 @@ export default function PasswordGenerator() {
       return item;
     });
 
-    if (newRes.join("").match(/[1-9]/) && newRes.join("").match(/[A-Z]/)) {
-      setString(newRes.join(""));
+    if (res.join("").match(/[1-9]/) && res.join("").match(/[A-Z]/)) {
+      setString(res.join(""));
     } else {
       PasswordGenerator();
     }
@@ -41,7 +41,7 @@ export default function PasswordGenerator() {
     <>
       <LinkBack />
       <TaskTitle title="Password generator" />
-      <ul>
+      <ul className="list-disc">
         You need to write a password generator that meets the following
         criteria:
         <li>6 - 20 characters long</li>
