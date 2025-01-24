@@ -16,6 +16,7 @@ export default function Home() {
       <Link href="/pages/repeated_substring">Repeated Substring</Link>
       <Link href="/pages/strong_number">Strong Number</Link>
       <Link href="/pages/triangle_number_check">Triangle number check</Link>
+      <Link href="/pages/valid_phone_number">Valid Phone Number</Link>
     </main>
   );
 }
