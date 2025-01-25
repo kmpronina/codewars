@@ -21,7 +21,7 @@ export default function RepeatedSubstring() {
   return (
     <>
       <LinkBack />
-      <TaskTitle title="Password generator" />
+      <TaskTitle title="Repeated substring" />
       For a given nonempty string s find a minimum substring t and the maximum
       number k, such that the entire string s is equal to t repeated k times.
       The input string consists of lowercase latin letters. Your function should

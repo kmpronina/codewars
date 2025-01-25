@@ -14,6 +14,9 @@ export default function Home() {
       <Link href="/pages/is_it_a_triangle">Is it a triangle?</Link>
       <Link href="/pages/password_generator">Password generator</Link>
       <Link href="/pages/repeated_substring">Repeated Substring</Link>
+      <Link href="/pages/simple_fun_116:_prime_string">
+        Simple Fun #116: Prime String
+      </Link>
       <Link href="/pages/strong_number">Strong Number</Link>
       <Link href="/pages/triangle_number_check">Triangle number check</Link>
       <Link href="/pages/valid_phone_number">Valid Phone Number</Link>
