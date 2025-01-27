@@ -17,7 +17,7 @@ export default function TriangleNumberCheck() {
   }
 
   function drawATriangleNumber(n: number) {
-    const numbarArr = [];
+    const numberArr = [];
     let currentNumber = 0;
 
     for (let i = 1; currentNumber < n; i++) {
@@ -26,9 +26,9 @@ export default function TriangleNumberCheck() {
         subArray.push(currentNumber);
         currentNumber++;
       }
-      numbarArr.push(subArray);
+      numberArr.push(subArray);
     }
-    return numbarArr;
+    return numberArr;
   }
 
   const numberOfSpaces = useMemo(() => {

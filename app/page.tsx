@@ -17,6 +17,9 @@ export default function Home() {
       <Link href="/pages/simple_fun_116:_prime_string">
         Simple Fun #116: Prime String
       </Link>
+      <Link href="/pages/simple_fun_223:_parameter_of_number">
+        Simple Fun #223: Parameter Of Number
+      </Link>
       <Link href="/pages/strong_number">Strong Number</Link>
       <Link href="/pages/triangle_number_check">Triangle number check</Link>
       <Link href="/pages/valid_phone_number">Valid Phone Number</Link>
