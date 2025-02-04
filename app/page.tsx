@@ -21,6 +21,7 @@ export default function Home() {
         Simple Fun #223: Parameter Of Number
       </Link>
       <Link href="/pages/strong_number">Strong Number</Link>
+      <Link href="/pages/transform_to_prime">Transform To Prime</Link>
       <Link href="/pages/triangle_number_check">Triangle number check</Link>
       <Link href="/pages/triple_trouble">Triple trouble</Link>
       <Link href="/pages/unary_function_chainer">Unary function chainer</Link>
